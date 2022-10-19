@@ -58,4 +58,15 @@ export const testData: {
     country: "Magyar Ország",
     expectedCode: "HU",
   },
+  {
+    country: "maGYArorSzáG",
+    expectedCode: "HU",
+  },
+  {
+    country: "   maGYArorSzáG;. ",
+    expectedCode: "HU",
+  },{
+    country: "   maGYArorSzáG ",
+    expectedCode: "HU",
+  }
 ];

@@ -1,10 +1,12 @@
 {
   "name": "country-map-poc",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "src/packageTests.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+    "dev": "yarn test:packages",
+    "test:speed": "ts-node-dev --respawn --transpile-only src/speedTest.ts",
+    "test:packages": "ts-node-dev --respawn --transpile-only src/packageTests.ts"
   },
   "dependencies": {
     "@types/node": "^18.11.2",
