@@ -1,7 +1,34 @@
-# country-map-poc
+# Country Mapping Poc
 
 Testing out different country map implementations.
 
+## Conslusion
+#### Solution 1 is the best solution, it's the most maintainable, and it's the most usable
+
+## Results
+
+```bash
+┌─────────┬──────────────────┬───────────────┬────────────┬────────────┬────────────┐
+│ (index) │     Country      │ Expected Code │ Solution 1 │ Solution 2 │ Solution 3 │
+├─────────┼──────────────────┼───────────────┼────────────┼────────────┼────────────┤
+│    0    │ 'United States'  │     'US'      │    'US'    │ undefined  │    'US'    │
+│    1    │ 'United Kingdom' │     'GB'      │    'GB'    │ undefined  │    'GB'    │
+│    2    │  'Magyarország'  │     'HU'      │    'HU'    │ undefined  │    'HU'    │
+│    3    │  'Magyarorszag'  │     'HU'      │    'HU'    │ undefined  │    'HU'    │
+│    4    │  'MAGYARORSZÁG'  │     'HU'      │    'HU'    │ undefined  │    'HU'    │
+│    5    │  'MAGYARORSZAG'  │     'HU'      │    'HU'    │ undefined  │    'HU'    │
+│    6    │    'Hungary'     │     'HU'      │    'HU'    │    'HU'    │ undefined  │
+│    7    │    'HUNGARY'     │     'HU'      │    'HU'    │    'HU'    │ undefined  │
+│    8    │  'magyarország'  │     'HU'      │    'HU'    │ undefined  │    'HU'    │
+│    9    │  'magyárorszag'  │     'HU'      │    'HU'    │ undefined  │ undefined  │
+│   10    │      'Hun'       │     'HU'      │    'HU'    │ undefined  │ undefined  │
+│   11    │     'hungry'     │     'HU'      │    null    │ undefined  │ undefined  │
+│   12    │     'magyar'     │     'HU'      │    null    │ undefined  │ undefined  │
+│   13    │ 'Magyar Ország'  │     'HU'      │    'HU'    │ undefined  │    'HU'    │
+│   14    │    'Total: '     │      14       │     12     │     2      │     8      │
+└─────────┴──────────────────┴───────────────┴────────────┴────────────┴────────────┘
+
+```
 
 ### Solution 1 - node-country-to-iso package: 
 https://www.npmjs.com/package/country-to-iso
@@ -42,7 +69,3 @@ const solution3 = (country: string): string | undefined => {
   }
 };
 ```
-
-## Conslusion 
-#### Solution 1 is the best solution, it's the most maintainable, and it's the most usable
-
